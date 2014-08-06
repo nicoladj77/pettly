@@ -22,6 +22,10 @@ class PhotosController < ApplicationController
   def edit
   end
 
+  def new_multiple
+    @photos = Photo.order('created_at DESC')
+    @photo = Photo.new
+  end
   # POST /photos
   # POST /photos.json
   def create

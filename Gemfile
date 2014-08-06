@@ -17,6 +17,9 @@ gem 'simple_form'
 gem 'dragonfly'
 gem 'dragonfly-s3_data_store'
 gem 'remotipart', '~> 1.2'
+gem 'jquery-fileupload-rails', :git => 'git@github.com:Springest/jquery-fileupload-rails.git'
+gem 'compass-rails'
+gem 'compass'
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller', :platforms=>[:mri_20]
