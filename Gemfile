@@ -14,6 +14,9 @@ gem 'devise'
 gem 'mysql2'
 gem 'pundit'
 gem 'simple_form'
+gem 'dragonfly'
+gem 'dragonfly-s3_data_store'
+gem 'remotipart', '~> 1.2'
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller', :platforms=>[:mri_20]
@@ -24,4 +27,5 @@ group :development do
 end
 group :production do
   gem 'thin'
+  gem 'rack-cache', :require => 'rack/cache'
 end
