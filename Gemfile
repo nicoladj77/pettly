@@ -20,10 +20,11 @@ gem 'remotipart', '~> 1.2'
 gem 'compass'
 gem 'compass-rails'
 gem 'jquery-fileupload-rails', :git => 'git@github.com:Springest/jquery-fileupload-rails.git'
+gem 'omniauth-facebook'
 
 group :development do
   gem 'better_errors'
-  gem 'binding_of_caller', :platforms=>[:mri_20]
+  gem 'binding_of_caller'
   gem 'hub', :require=>nil
   gem 'quiet_assets'
   gem 'rails_apps_pages'
