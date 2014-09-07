@@ -4,9 +4,8 @@
   <div class="form-inputs">
     <%= f.input :name %>
     <%= f.input :type %>
-    <%= f.input :date_of_birth %>
+    <%= f.input :date_of_birth, type: :date, label: "Date of Birth", as: :string, start_year: Time.now.year - 90, end_year: Time.now.year - 8, order: [:day, :month, :year] %>
     <%= f.input :breed %>
-    <%= f.input :user_id %>
     <%= f.input :weight %>
     <%= f.input :personality %>
   </div>
