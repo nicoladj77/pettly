@@ -1,3 +1,11 @@
-<h3>Welcome</h3>
-<p><%= link_to 'Users:', users_path %> <%= User.count %> registered</p>
-
+<div class="jumbotron">
+	<h1>Welcome to Pettly!</h1>
+	<p>Pettly is the new website for pet lovers. You need to be registered to use our website</p>
+	<div class="galleria">
+		<img src="/images/pet1.jpg" data-title="My title" data-description="My description">
+		<img src="/images/pet2.jpg" data-title="Another title" data-description="My <em>HTML</em> description">
+	</div>
+	<%= link_to 'Sign in', new_user_session_path, :class => 'btn btn-lg btn-primary' %>
+	<%= link_to 'Sign up', new_user_registration_path, :class => 'btn btn-lg btn-primary' %>
+	<%= link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook), :class => 'btn btn-lg btn-primary' %>
+</div>

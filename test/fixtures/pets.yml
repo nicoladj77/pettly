@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  type: 
+  date_of_birth: 2014-09-08
+  breed: MyString
+  user_id: 1
+  weight: MyString
+  personality: MyString
+
+two:
+  name: MyString
+  type: 
+  date_of_birth: 2014-09-08
+  breed: MyString
+  user_id: 1
+  weight: MyString
+  personality: MyString

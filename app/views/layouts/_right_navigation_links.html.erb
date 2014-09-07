@@ -1,0 +1,4 @@
+<%# add navigation links to this file %>
+<% if user_signed_in? %>
+  <li><%= link_to current_user.name, user_profile_path(current_user) %></li>
+<% end %>

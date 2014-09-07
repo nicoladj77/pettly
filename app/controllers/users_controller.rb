@@ -28,6 +28,17 @@ class UsersController < ApplicationController
     user.destroy
     redirect_to users_path, :notice => "User deleted."
   end
+  
+  def profile
+    @user = User.find(params[:id])
+    @pets = Pet.where({ user_id: @user.id })
+    authorize @user
+  end
+  
+  def newsfeed
+    @user = current_user
+    authorize @user
+  end
 
   private
 

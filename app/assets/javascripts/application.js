@@ -14,6 +14,11 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require bootstrap
+//= require jquery/jquery.easing-1.3
+//= require jquery/jquery.elastislide
+//= require jquery/jquery.tmpl.min
+//= require gallery/galleria
+//= require gallery/galleria/classic
 //= require jquery.remotipart
 //= require jquery-fileupload/basic
 //= require_tree .

@@ -21,6 +21,7 @@ gem 'compass'
 gem 'compass-rails'
 gem 'jquery-fileupload-rails', :git => 'git@github.com:Springest/jquery-fileupload-rails.git'
 gem 'omniauth-facebook'
+gem 'rails-gallery'
 
 group :development do
   gem 'better_errors'
@@ -31,6 +32,6 @@ group :development do
   gem 'rails_layout'
 end
 group :production do
-  gem 'thin'
   gem 'rack-cache', :require => 'rack/cache'
+  gem 'thin'
 end

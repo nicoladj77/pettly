@@ -1,6 +1,8 @@
 class User < ActiveRecord::Base
   enum role: [:user, :breeder, :vet, :sitter, :admin]
   after_initialize :set_default_role, :if => :new_record?
+  has_many :photos
+  has_many :pets
 
   def set_default_role
     self.role ||= :user
@@ -13,7 +15,7 @@ class User < ActiveRecord::Base
   devise :omniauthable, :omniauth_providers => [:facebook]
   
   def self.from_omniauth(auth)
-    logger.debug "from_omniauth #{auth.inspect}"
+    logger.debug "from_omniauth"
     where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
       user.email = auth.info.email
       user.password = Devise.friendly_token[0,20]
@@ -28,9 +30,8 @@ class User < ActiveRecord::Base
   end
   
   def self.new_with_session(params, session)
-    logger.debug "New user #{session['devise.facebook_data']}"
+    logger.debug "new_with_session"
     super.tap do |user|
-      logger.debug "user #{user.inspect}"
       if data = session["devise.facebook_data"] && session["devise.facebook_data"]["extra"]["raw_info"]
         user.email = data["email"] if user.email.blank?
         user.name = data["first_name"]

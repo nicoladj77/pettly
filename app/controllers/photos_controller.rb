@@ -14,7 +14,7 @@ class PhotosController < ApplicationController
 
   # GET /photos/new
   def new
-    @photos = Photo.order('created_at DESC')
+    @photos = Photo.where({ user_id: current_user.id }).order('created_at DESC')
     @photo = Photo.new
   end
 
@@ -23,13 +23,14 @@ class PhotosController < ApplicationController
   end
 
   def new_multiple
-    @photos = Photo.order('created_at DESC')
+    @photos = Photo.where({ user_id: current_user.id }).order('created_at DESC')
     @photo = Photo.new
   end
   # POST /photos
   # POST /photos.json
   def create
     @photo = Photo.new(photo_params)
+    @photo.user = current_user
 
     respond_to do |format|
       if @photo.save

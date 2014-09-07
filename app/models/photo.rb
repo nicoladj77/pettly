@@ -1,5 +1,6 @@
 class Photo < ActiveRecord::Base
   dragonfly_accessor :image
+  belongs_to :user
  
   validates :image, presence: true
   validates_size_of :image, maximum: 500.kilobytes,
