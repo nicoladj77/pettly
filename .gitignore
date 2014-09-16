@@ -51,7 +51,7 @@ pickle-email-*.html
 .zeus.sock
 /config/initializers/app_env_vars.rb
 .project
-Gemfile.lock
+
 dragonfly.log
 dragonfly.log
 
