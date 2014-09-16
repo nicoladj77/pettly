@@ -19,7 +19,7 @@ gem 'dragonfly-s3_data_store'
 gem 'remotipart', '~> 1.2'
 gem 'compass'
 gem 'compass-rails'
-gem 'jquery-fileupload-rails', :git => 'git@github.com:Springest/jquery-fileupload-rails.git'
+gem 'jquery-fileupload-rails', :git => 'https://github.com/Springest/jquery-fileupload-rails.git'
 gem 'omniauth-facebook'
 gem 'rails-gallery'
 

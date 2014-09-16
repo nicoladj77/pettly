@@ -1,5 +1,5 @@
 GIT
-  remote: git@github.com:Springest/jquery-fileupload-rails.git
+  remote: https://github.com/Springest/jquery-fileupload-rails.git
   revision: 2ebfdf1cc9a768f36420aaad9668ba68f2a5943b
   specs:
     jquery-fileupload-rails (0.4.2)
